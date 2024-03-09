@@ -5,7 +5,9 @@ const App = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.window}>
-        Hello World
+        <div className={styles.titleBar}>
+          Hello World
+        </div>
       </div>
     </div>
   )

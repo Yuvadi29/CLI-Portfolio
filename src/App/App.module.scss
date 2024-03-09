@@ -42,3 +42,19 @@
     transform: scale(1);
   }
 }
+
+.titleBar {
+  position: relative;
+  background-color: var(--dark);
+  border-radius: var(--round-border-radius) var(--round-border-radius) 0 0;
+  display: flex;
+  flex: 0 0;
+  align-items: center;
+  color: var(--muted);
+  font-size: var(--font-size-header);
+  font-family: var(--font-normal);
+  font-weight: 900;
+  padding: 7px 10px;
+  user-select: none;
+  -webkit-user-select: none;
+}
