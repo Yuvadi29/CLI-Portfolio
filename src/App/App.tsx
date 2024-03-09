@@ -4,6 +4,7 @@ import commands from "../Commands/Commands";
 import { projects, github_username } from "../config";
 import { AppState } from "../typings/index.d";
 import InputManager from "../InputManager/InputManager";
+import Loader from "../Loader/loader";
 
 class App extends Component<{}, AppState> {
   mainRef: RefObject<any>;
@@ -43,22 +44,26 @@ class App extends Component<{}, AppState> {
   }
 
   async componentDidMount() {
-    // Fetch project data from github
-    const promises = projects.map((project) =>
-      fetch(`https://api.github.com/repos/${project}`).then((res) => res.json())
-    );
-    const projectData = [];
-    for (const promise of promises) projectData.push(await promise);
-    const userData = await fetch(
-      `https://api.github.com/users/${github_username}`
-    ).then((res) => res.json());
-    this.setState({
-      ...this.state,
-      projectDataLoaded: true,
-      projectData: projectData,
-      userDataLoaded: true,
-      userData: userData,
-    });
+    try {
+      // Fetch project data from github
+      const promises = projects.map((project) =>
+        fetch(`https://api.github.com/repos/${project}`).then((res) => res.json())
+      );
+      const projectData = [];
+      for (const promise of promises) projectData.push(await promise);
+      const userData = await fetch(
+        `https://api.github.com/users/${github_username}`
+      ).then((res) => res.json());
+      this.setState({
+        ...this.state,
+        projectDataLoaded: true,
+        projectData: projectData,
+        userDataLoaded: true,
+        userData: userData,
+      });
+    } catch (error) {
+      console.log("Error Fetching Data: ", error);
+    }
   }
 
   componentDidUpdate(_: any, prevState: AppState) {
@@ -78,7 +83,8 @@ class App extends Component<{}, AppState> {
     const { record } = this.state;
     return (
       <div className={styles.wrapper}>
-        <div className={styles.window}>
+        <Loader />
+        <div className={`${styles.window} main-content`}>
           <div className={styles.titleBar}>
             <div className={styles.dotHolder}>
               <div className={styles.dot}></div>

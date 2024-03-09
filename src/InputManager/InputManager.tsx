@@ -45,7 +45,7 @@ class InputManager extends Component<
                         className={`${styles.input} ${commands.has(value.trim()) ? styles.validCommand : ""
                             }`}
                         spellCheck={false}
-                        placeholder="confused? type ls and hit enter to get started!"
+                        placeholder="Wanna know about me? type ls and hit enter to get started!"
                         ref={this.inputRef}
                         autoFocus
                         onKeyDown={(event) => {
