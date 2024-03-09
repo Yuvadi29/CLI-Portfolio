@@ -2,7 +2,8 @@ import React, { Component, RefObject, createRef } from 'react';
 import styles from "./App.module.scss";
 import { AppState } from '../typings/index.d';
 import commands from '../Commands/Commands';
-import { github_username } from '../config';
+import { github_username, projects } from '../config';
+import InputManager from '../InputManager/InputManager';
 
 class App extends Component<{}, AppState> {
   mainRef: RefObject<any>;
@@ -41,24 +42,24 @@ class App extends Component<{}, AppState> {
     };
   }
 
-  // async componentDidMount() {
-  //   // Fetch project data from github
-  //   const promises = projects.map((project) =>
-  //     fetch(`https://api.github.com/repos/${project}`).then((res) => res.json())
-  //   );
-  //   const projectData = [];
-  //   for (const promise of promises) projectData.push(await promise);
-  //   const userData = await fetch(
-  //     `https://api.github.com/users/${github_username}`
-  //   ).then((res) => res.json());
-  //   this.setState({
-  //     ...this.state,
-  //     projectDataLoaded: true,
-  //     projectData: projectData,
-  //     userDataLoaded: true,
-  //     userData: userData,
-  //   });
-  // }
+  async componentDidMount() {
+    // Fetch project data from github
+    const promises = projects.map((project) =>
+      fetch(`https://api.github.com/repos/${project}`).then((res) => res.json())
+    );
+    const projectData = [];
+    for (const promise of promises) projectData.push(await promise);
+    const userData = await fetch(
+      `https://api.github.com/users/${github_username}`
+    ).then((res) => res.json());
+    this.setState({
+      ...this.state,
+      projectDataLoaded: true,
+      projectData: projectData,
+      userDataLoaded: true,
+      userData: userData,
+    });
+  }
 
   componentDidUpdate(_: any, prevState: AppState) {
     // auto scroll
@@ -103,6 +104,7 @@ class App extends Component<{}, AppState> {
                 <div>{output}</div>
               </div>
             ))}
+            <InputManager handleExecute={this.handleExecute} />
           </div>
         </div>
       </div >
