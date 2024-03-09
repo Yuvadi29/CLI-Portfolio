@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./App.module.scss";
+import Commands from '../Commands/Commands';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         </div>
         <div className={styles.mainContent}>
           Hello World
+          {/* {Commands} */}
         </div>
       </div>
     </div>
