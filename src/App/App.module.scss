@@ -1,0 +1,44 @@
+.wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--darkest);
+  background-image: url(../../public/grid_deep.svg);
+  background-size: cover;
+}
+
+.window {
+  background-color: var(--darkest);
+  margin-top: auto;
+  margin-bottom: auto;
+  height: calc(100vh - 10px);
+  max-height: 600px;
+  width: 700px;
+  padding: 0;
+  color: white;
+  border-radius: var(--round-border-radius);
+  display: flex;
+  flex-direction: column;
+  animation: pop-fade 0.25s 1 forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px -1px 228px 1px rgba(73, 4, 110, 0.59);
+  -webkit-box-shadow: 10px -1px 228px 1px rgba(73, 4, 110, 0.59);
+  -moz-box-shadow: 10px -1px 228px 1px rgba(73, 4, 110, 0.59);
+}
+
+@keyframes pop-fade {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.7);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: scale(1);
+  }
+}
