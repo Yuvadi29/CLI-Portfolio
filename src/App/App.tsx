@@ -11,8 +11,13 @@ const App = () => {
             <div className={styles.dot}></div>
             <div className={styles.dot}></div>
           </div>
+          <div className={styles.titleHeader}>
+            <i className='fa fw fas fa-code'></i> Aditya@Dev:~
+          </div>
         </div>
-        Hello World
+        <div className={styles.mainContent}>
+          Hello World
+        </div>
       </div>
     </div>
   )

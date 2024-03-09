@@ -83,3 +83,40 @@ $dots: (
     @include dot($dotColor: $color);
   }
 }
+
+.mainContent {
+  padding: 20px;
+  flex: 1 1;
+  overflow: hidden scroll;
+  font-family: var(--font-code);
+  font-size: var(--font-size-regular);
+  color: var(--light);
+  line-height: 1.4em;
+
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+
+  transition: scrollbar-color 0.25s;
+  transition-delay: 0.75s;
+
+  &:hover {
+    scrollbar-color: var(--scrollbar-color-thumb) transparent;
+    transition-delay: 0s;
+    transition-duration: 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color-thumb);
+    border-radius: 0.5em;
+  }
+
+  i {
+    font-size: var(--font-size-icon);
+  }
+}
