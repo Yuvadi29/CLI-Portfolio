@@ -1,9 +1,9 @@
-import React, { Component, RefObject, createRef } from 'react';
+import React, { Component, createRef, RefObject } from "react";
 import styles from "./App.module.scss";
-import { AppState } from '../typings/index.d';
-import commands from '../Commands/Commands';
-import { github_username, projects } from '../config';
-import InputManager from '../InputManager/InputManager';
+import commands from "../Commands/Commands";
+import { projects, github_username } from "../config";
+import { AppState } from "../typings/index.d";
+import InputManager from "../InputManager/InputManager";
 
 class App extends Component<{}, AppState> {
   mainRef: RefObject<any>;
@@ -25,9 +25,9 @@ class App extends Component<{}, AppState> {
       const commandName = arg.trim();
       let output;
       if (!commandName) output = <></>;
-      else if (!commands.has(commandName)) {
-        output = <>Aditya@Dev: command not found :{commandName}</>;
-      } else output = commands.get(commandName)?.execute(this);
+      else if (!commands.has(commandName))
+        output = <>Aditya@Dev: command not found: {commandName}</>;
+      else output = commands.get(commandName)?.execute(this);
       if (output)
         this.setState({
           ...this.state,
@@ -74,12 +74,10 @@ class App extends Component<{}, AppState> {
       });
   }
 
-
   render() {
     const { record } = this.state;
     return (
-
-      <div className={styles.wrapper} >
+      <div className={styles.wrapper}>
         <div className={styles.window}>
           <div className={styles.titleBar}>
             <div className={styles.dotHolder}>
@@ -88,16 +86,22 @@ class App extends Component<{}, AppState> {
               <div className={styles.dot}></div>
             </div>
             <div className={styles.titleHeader}>
-              <i className='fa fw fas fa-code'></i> Aditya@Dev:~
+              <i className="fa-fw fas fa-code"></i> Aditya@Dev:~
             </div>
           </div>
           <div ref={this.mainRef} className={styles.mainContent}>
-            Hello World
             {record.map(({ command, output }, index) => (
               <div key={index}>
                 <span className={styles.promptPrefix}>
-                  <span>{github_username}</span>@ <span>dev:</span>~${" "}
-                  <span className={commands.has(command) ? styles.validCommand : styles.invalidCommand}>
+                  <span>{github_username}</span>@<span>sh:</span>
+                  ~${" "}
+                  <span
+                    className={
+                      commands.has(command)
+                        ? styles.validCommand
+                        : styles.invalidCommand
+                    }
+                  >
                     {command}
                   </span>
                 </span>
@@ -107,8 +111,8 @@ class App extends Component<{}, AppState> {
             <InputManager handleExecute={this.handleExecute} />
           </div>
         </div>
-      </div >
-    )
+      </div>
+    );
   }
 }
 

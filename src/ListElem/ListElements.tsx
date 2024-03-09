@@ -7,14 +7,16 @@ const ListElements = (props: ListElementProps) => {
 
     return (
         <div className={styles.listElement}>
-            <i className={icon}></i>{''}
+            <i className={icon}></i>{' '}
             <strong className={help ? styles.alt : ''}>
                 {link ? (
-                    <a href={link} target={'_blank'} rel='noreferrer'></a>
+                    <a href={link} target={'_blank'} rel="noreferrer">
+                        {name}
+                    </a>
                 ) : (
                     <>{name}</>
                 )}
-            </strong>{''}
+            </strong>{' '}
             <em>{description}</em>
         </div>
     )

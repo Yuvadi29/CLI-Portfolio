@@ -30,17 +30,17 @@ const links = [
     },
 
     {
-        name: "Website",
-        icon: "fas fa-fw fa-youtube",
+        name: "Youtube Channel",
+        icon: "fa fa-youtube-play",
         link: "https://www.youtube.com/@Coding_adda",
         description: "Youtube Channel",
     },
-    // {
-    //     name: "Twitter",
-    //     icon: "fab fa-fw fa-twitter",
-    //     link: "https://twitter.com/rohaxyz",
-    //     description: "My profile on Twitter",
-    // },
+    {
+        name: "Blog Page",
+        icon: "fa fa-pencil",
+        link: "https://codingadda.hashnode.dev/",
+        description: "My Channel's Blog Page",
+    },
     // {
     //   name: "Discord",
     //   // link: `https://discord.com/users/${discord_userid}`,

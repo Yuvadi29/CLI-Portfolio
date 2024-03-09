@@ -6,11 +6,11 @@ import ListElements from '../ListElem/ListElements';
 import { info, links } from '../config';
 
 
-interface AppData {
-    title: string;
-    url: string;
-    explanation: string;
-}
+// interface AppData {
+//     title: string;
+//     url: string;
+//     explanation: string;
+// }
 
 const HistoryCommand = () => {
     const [events, setEvents] = useState([]);
