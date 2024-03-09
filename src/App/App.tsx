@@ -6,8 +6,13 @@ const App = () => {
     <div className={styles.wrapper}>
       <div className={styles.window}>
         <div className={styles.titleBar}>
-          Hello World
+          <div className={styles.dotHolder}>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+          </div>
         </div>
+        Hello World
       </div>
     </div>
   )

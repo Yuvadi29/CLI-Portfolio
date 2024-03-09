@@ -58,3 +58,28 @@
   user-select: none;
   -webkit-user-select: none;
 }
+
+.dotHolder {
+  display: flex;
+}
+
+@mixin dot($dotColor) {
+  content: "";
+  background-color: $dotColor;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 100%;
+  margin: 5px;
+}
+
+$dots: (
+  "1": var(--red),
+  "2": var(--yellow),
+  "3": var(--green),
+);
+
+@each $x, $color in $dots {
+  .dot:nth-of-type(#{$x}) {
+    @include dot($dotColor: $color);
+  }
+}
