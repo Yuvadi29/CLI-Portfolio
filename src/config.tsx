@@ -5,14 +5,14 @@ const github_username = "Yuvadi29";
 const email = "letstalkaditya@gmail.com";
 
 const projects = [
-    "rohansx/doctalyzer",
-    "rohansx/companion-ai",
-    "rohansx/vercel-clone",
-    "rohansx/informatician",
-    "rohansx/WAVD",
-    "rohansx/xmail",
-    "rohansx/paradox",
-    "rohansx/npx-rohan",
+    "Yuvadi29/Youtube-Clone",
+    "Yuvadi29/Netflix-Clone",
+    "Yuvadi29/FilmPire-AI-Powered-Movie-App",
+    "Yuvadi29/StartUpProject",
+    "Yuvadi29/AmazonClone",
+    // "rohansx/xmail",
+    // "rohansx/paradox",
+    // "rohansx/npx-rohan",
 ];
 
 const links = [

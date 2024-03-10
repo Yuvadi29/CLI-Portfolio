@@ -45,6 +45,7 @@ class App extends Component<{}, AppState> {
 
   async componentDidMount() {
     try {
+      
       // Fetch project data from github
       const promises = projects.map((project) =>
         fetch(`https://api.github.com/repos/${project}`).then((res) => res.json())

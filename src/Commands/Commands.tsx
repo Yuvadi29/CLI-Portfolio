@@ -212,7 +212,7 @@ const rawCommands: Command[] = [
         execute(app) {
             const { projectDataLoaded, projectData } = app.state;
             if (!projectDataLoaded)
-                return <>rohan@sh: project data could not be fetched</>;
+                return <>Aditya@Dev: project data could not be fetched</>;
             return (
                 <>
                     {projectData.map(
