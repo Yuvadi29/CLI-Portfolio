@@ -1,4 +1,7 @@
 import React from "react";
+import Markdown from "react-markdown";
+
+
 const github_username = "Yuvadi29";
 // const discord_usertag = ''
 // const discord_userid = ''
@@ -58,32 +61,56 @@ const links = [
 
 const info = (
     <>
-        <p>Yo! I'm a full stack developer.</p>
-        <p>
-            I've got intermediate experience with{" "}
-            <span className="highlighted">JavaScript</span> and{" "}
-            <span className="highlighted">Node.js</span>.
-        </p>
-        <p>
-            I've been doing <span className="highlighted">full stack devlopment</span>{" "}
-            for a couple of years now. Currently, I'm learning latest techstack such
-            as <span className="highlighted">Next.js</span> and{" "}
-            <span className="highlighted">PostgreSQL</span>
-        </p>
-        <p>
-            Aside from that, I have basic knowledge of{" "}
-            {/* <span className="highlighted">python</span>,{" "} */}
-            <span className="highlighted">java</span>,{" "}
-            <span className="highlighted">git</span> and{" "}
-            <span className="highlighted">shell scripting.</span>
-        </p>
+        <Markdown >
+
+            ![C](https://skillicons.dev/icons?i=c)
+            ![HTML5](https://skillicons.dev/icons?i=html)
+            ![CSS3](https://skillicons.dev/icons?i=css)
+            ![JavaScript](https://skillicons.dev/icons?i=js)
+            ![Python](https://skillicons.dev/icons?i=python)
+            ![Java](https://skillicons.dev/icons?i=java)
+
+            ![Bootstrap](https://skillicons.dev/icons?i=bootstrap)
+            ![NodeJS](https://skillicons.dev/icons?i=nodejs)
+            ![ExpressJs](https://skillicons.dev/icons?i=express)
+            ![React](https://skillicons.dev/icons?i=react)
+            ![Vite](https://skillicons.dev/icons?i=vite)
+            ![Next JS](https://skillicons.dev/icons?i=nextjs)
+            ![Flask](https://skillicons.dev/icons?i=flask)
+            ![Material UI](https://skillicons.dev/icons?i=materialui)
+            ![Tailwind](https://skillicons.dev/icons?i=tailwind)
+
+
+            ![Visual Studio Code](https://skillicons.dev/icons?i=vscode)
+
+
+            ![Git](https://skillicons.dev/icons?i=git)
+            ![GitHub](https://skillicons.dev/icons?i=github)
+
+            ![Netlify](https://skillicons.dev/icons?i=netlify)
+            ![Heroku](https://skillicons.dev/icons?i=heroku)
+            ![Vercel](https://skillicons.dev/icons?i=vercel)
+
+            ![MongoDB](https://skillicons.dev/icons?i=mongodb)
+            ![MySQL](https://skillicons.dev/icons?i=mysql)
+            ![Firebase](https://skillicons.dev/icons?i=firebase)
+
+            ![Postman](https://skillicons.dev/icons?i=postman)
+            ![GraphQl](https://skillicons.dev/icons?i=graphql)
+            ![Bash](https://skillicons.dev/icons?i=bash)
+            ![AWS](https://skillicons.dev/icons?i=aws)
+            ![Adobe Premiere Pro](https://skillicons.dev/icons?i=pr)
+            ![Adobe After Effects](https://skillicons.dev/icons?i=ae)
+
+            ![Linux](https://skillicons.dev/icons?i=linux)
+        </Markdown>
     </>
 );
 
 const resume = {
     // link: "https://rohan.sh/resume",
-    link: "https://bit.ly/rohansxcv",
-    description: "My resume",
+    link: "https://bit.ly/4c5CI4Z",
+    description: "My Resume ",
 };
 
 export {

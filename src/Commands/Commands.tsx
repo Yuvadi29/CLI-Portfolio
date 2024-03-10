@@ -5,7 +5,6 @@ import { Command, Commands } from '../typings/index.d';
 import ListElements from '../ListElem/ListElements';
 import { info, links } from '../config';
 
-
 // interface AppData {
 //     title: string;
 //     url: string;
@@ -156,14 +155,6 @@ const rawCommands: Command[] = [
                         </div>
                     </div>
 
-                    <div className={styles.icons}>
-                        <i className="fab fa-fw fa-react"></i>
-                        {/* <i className="fab fa-fw fa-tailwind"></i> */}
-                        <i className="fab fa-fw fa-js-square"></i>
-                        <i className="fab fa-fw fa-node-js"></i>
-                        <i className="fab fa-fw fa-python"></i>
-                        <i className="fab fa-fw fa-java"></i>
-                    </div>
                 </div>
             );
         },
@@ -193,14 +184,7 @@ const rawCommands: Command[] = [
                         </div>
                     </div>
 
-                    <div className={styles.icons}>
-                        <i className="fab fa-fw fa-react"></i>
-                        {/* <i className="fab fa-fw fa-tailwind"></i> */}
-                        <i className="fab fa-fw fa-js-square"></i>
-                        <i className="fab fa-fw fa-node-js"></i>
-                        <i className="fab fa-fw fa-python"></i>
-                        <i className="fab fa-fw fa-java"></i>
-                    </div>
+
                 </div>
             );
         },
