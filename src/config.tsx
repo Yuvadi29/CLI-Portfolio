@@ -61,6 +61,27 @@ const links = [
 
 const info = (
     <>
+
+        <span className="highlighted">
+            🚀 Full-Stack Developer | MERN Enthusiast | Content Creator 🌐
+        </span>
+
+        <p>
+            A passionate and results-driven Full-Stack Developer with a knack for crafting robust and scalable web applications. My journey in the coding realm has led me to master the
+            &nbsp;<span className="highlighted">
+                MERN (MongoDB, Express.js, React, Node.js)
+            </span>
+            stack,
+            where I weave together front-end finesse with back-end brilliance.
+        </p>
+
+        <p>
+
+            🚀 What Sets Me Apart:
+            I thrive on turning complex ideas into clean, efficient, and user-friendly solutions. Whether it's building scalable APIs, designing intuitive user interfaces, or optimizing performance, I bring a holistic approach to every project.
+        </p>
+
+        🛠️ Tech Toolbox: <br />
         <Markdown >
 
             ![C](https://skillicons.dev/icons?i=c)
