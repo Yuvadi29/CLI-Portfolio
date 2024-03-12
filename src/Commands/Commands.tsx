@@ -165,7 +165,7 @@ const rawCommands: Command[] = [
         description: "Show information about me",
         execute(app) {
             const { userDataLoaded, userData } = app.state;
-            if (!userDataLoaded) return <>sh: user data could not be fetched</>;
+            if (!userDataLoaded) return <>Dev: user data could not be fetched</>;
             const { avatar_url, login, name, bio } = userData;
             return (
                 <div className={styles.infoWrapper}>
@@ -243,7 +243,7 @@ const rawCommands: Command[] = [
                 <ListElements
                     icon="fas fa-fw fa-file"
                     name="Resume"
-                    link="https://bit.ly/rohanxcv"
+                    link="https://bit.ly/4c5CI4Z"
                     description="Click to see my resume!"
                 />
             );
