@@ -4,9 +4,9 @@ import commands from "../Commands/Commands";
 import { projects, github_username } from "../config";
 import { AppState } from "../typings/index.d";
 import InputManager from "../InputManager/InputManager";
-import Loader from "../Loader/loader";
+import Loader from "../Loader/Loader";
 
-class App extends Component<{}, AppState> {
+class App extends Component<{}, AppState & { isLoading: boolean }> {
   mainRef: RefObject<any>;
   handleExecute: (arg: string) => void;
 
@@ -17,6 +17,7 @@ class App extends Component<{}, AppState> {
       commands: commands,
       projectDataLoaded: false,
       userDataLoaded: false,
+      isLoading: true,
     };
 
     this.mainRef = createRef();
@@ -45,7 +46,10 @@ class App extends Component<{}, AppState> {
 
   async componentDidMount() {
     try {
-      
+
+      setTimeout(() => {
+        this.setState({ isLoading: false });
+      }, 3500);
       // Fetch project data from github
       const promises = projects.map((project) =>
         fetch(`https://api.github.com/repos/${project}`).then((res) => res.json())
@@ -81,10 +85,13 @@ class App extends Component<{}, AppState> {
   }
 
   render() {
-    const { record } = this.state;
+    const { record, isLoading } = this.state;
+
+    if (isLoading) {
+      return <Loader />;
+    }
     return (
       <div className={styles.wrapper}>
-        <Loader />
         <div className={`${styles.window} main-content`}>
           <div className={styles.titleBar}>
             <div className={styles.dotHolder}>
