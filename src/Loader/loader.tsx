@@ -23,18 +23,18 @@ const Loader = () => {
     }, 500);
 
     return () => clearInterval(interval);
-  }, []);
+  });
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.5
-      }
-    }
-  };
+  // const containerVariants = {
+  //   hidden: { opacity: 0 },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       delayChildren: 0.3,
+  //       staggerChildren: 0.5
+  //     }
+  //   }
+  // };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
