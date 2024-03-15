@@ -5,7 +5,7 @@ import { projects, github_username } from "../config";
 import { AppState } from "../typings/index.d";
 import InputManager from "../InputManager/InputManager";
 import Loader from "../Loader/Loader";
-import { inject } from '@vercel/analytics';
+import { inject  } from "@vercel/analytics";
 
 inject();
 
