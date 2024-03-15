@@ -5,6 +5,9 @@ import { projects, github_username } from "../config";
 import { AppState } from "../typings/index.d";
 import InputManager from "../InputManager/InputManager";
 import Loader from "../Loader/Loader";
+import { inject } from '@vercel/analytics';
+ 
+inject();
 
 class App extends Component<{}, AppState & { isLoading: boolean }> {
   mainRef: RefObject<any>;
