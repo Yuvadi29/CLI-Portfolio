@@ -49,29 +49,29 @@ const HistoryCommand = () => {
     )
 }
 
-const FutureCommand = () => {
-    const [futureImageUrl, setFutureImageUrl] = useState("");
-    const [loading, setLoading] = useState(true);
+// const FutureCommand = () => {
+//     const [futureImageUrl, setFutureImageUrl] = useState("");
+//     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        // Replace with your image URL or API endpoint
-        const imageUrl =
-            "https://res.cloudinary.com/da6jt8q7s/image/upload/v1708936852/future_lkv1fd.jpg";
-        setFutureImageUrl(imageUrl);
-        setLoading(false);
-    }, []);
+//     useEffect(() => {
+//         // Replace with your image URL or API endpoint
+//         const imageUrl =
+//             "https://res.cloudinary.com/da6jt8q7s/image/upload/v1708936852/future_lkv1fd.jpg";
+//         setFutureImageUrl(imageUrl);
+//         setLoading(false);
+//     }, []);
 
-    if (loading) return <div>Loading...</div>;
-    return (
-        <div className={styles.imageContainer}>
-            <img
-                src={futureImageUrl}
-                alt="Glimpse of the Future"
-                className={styles.catImage + " " + styles.catImageContainerImage}
-            />
-        </div>
-    );
-};
+//     if (loading) return <div>Loading...</div>;
+//     return (
+//         <div className={styles.imageContainer}>
+//             <img
+//                 src={futureImageUrl}
+//                 alt="Glimpse of the Future"
+//                 className={styles.catImage + " " + styles.catImageContainerImage}
+//             />
+//         </div>
+//     );
+// };
 
 // const MemeCommand = () => {
 //     const [memeUrl, setMemeUrl] = useState("");
@@ -288,14 +288,14 @@ const rawCommands: Command[] = [
     //     },
     // },
 
-    {
-        name: "future",
-        icon: "fas fa-fw fa-image", // Use an appropriate icon
-        description: "See a glimpse of the future!",
-        execute(app) {
-            return <FutureCommand />;
-        },
-    },
+    // {
+    //     name: "future",
+    //     icon: "fas fa-fw fa-image", // Use an appropriate icon
+    //     description: "See a glimpse of the future!",
+    //     execute(app) {
+    //         return <FutureCommand />;
+    //     },
+    // },
 
     {
         name: "clear",
