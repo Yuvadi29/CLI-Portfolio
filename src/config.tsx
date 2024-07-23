@@ -8,11 +8,11 @@ const github_username = "Yuvadi29";
 const email = "letstalkaditya@gmail.com";
 
 const projects = [
-    "Yuvadi29/Youtube-Clone",
-    "Yuvadi29/Netflix-Clone",
+    "Yuvadi29/Detoxify",
+    "Yuvadi29/AI-Content-Generator",
     "Yuvadi29/FilmPire-AI-Powered-Movie-App",
     "Yuvadi29/StartUpProject",
-    "Yuvadi29/AmazonClone",
+    "Yuvadi29/ResumeAI",
     // "rohansx/xmail",
     // "rohansx/paradox",
     // "rohansx/npx-rohan",
